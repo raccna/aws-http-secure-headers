@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -37,4 +38,4 @@ jobs:
         run: npm run eslint
 
       - name: Run Tests
-        run: npm run test
+        run: npm run test:ci
