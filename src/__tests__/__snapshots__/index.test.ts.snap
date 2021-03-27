@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index Should process application/json response correctly 1`] = `
+Object {
+  "headers": Object {
+    "cache-control": Array [
+      Object {
+        "key": "Cache-Control",
+        "value": "no-cache=\\"Set-Cookie, Set-Cookie2\\"",
+      },
+    ],
+    "content-security-policy": Array [
+      Object {
+        "key": "Content-Security-Policy",
+        "value": "default-src: 'self'",
+      },
+    ],
+    "content-type": Array [
+      Object {
+        "value": "application/json",
+      },
+    ],
+    "pragma": Array [
+      Object {
+        "key": "Pragma",
+        "value": "no-cache",
+      },
+    ],
+    "referrer-policy": Array [
+      Object {
+        "key": "Referrer-Policy",
+        "value": "same-origin",
+      },
+    ],
+    "server": Array [
+      Object {
+        "key": "Server",
+        "value": "",
+      },
+    ],
+    "strict-transport-security": Array [
+      Object {
+        "key": "Strict-Transport-Security",
+        "value": "max-age=63072000; includeSubdomains",
+      },
+    ],
+    "x-content-type-options": Array [
+      Object {
+        "key": "X-Content-Type-Options",
+        "value": "nosniff",
+      },
+    ],
+    "x-frame-options": Array [
+      Object {
+        "key": "X-Frame-Options",
+        "value": "SAMEORIGIN",
+      },
+    ],
+    "x-xss-protection": Array [
+      Object {
+        "key": "X-XSS-Protection",
+        "value": "1; mode=block",
+      },
+    ],
+  },
+  "status": "200",
+  "statusDescription": "OK",
+}
+`;
+
+exports[`index Should process text/html response correctly 1`] = `
+Object {
+  "headers": Object {
+    "cache-control": Array [
+      Object {
+        "key": "Cache-Control",
+        "value": "no-cache=\\"Set-Cookie, Set-Cookie2\\"",
+      },
+    ],
+    "content-security-policy": Array [
+      Object {
+        "key": "Content-Security-Policy",
+        "value": "default-src: 'self'",
+      },
+    ],
+    "content-type": Array [
+      Object {
+        "value": "text/html",
+      },
+    ],
+    "pragma": Array [
+      Object {
+        "key": "Pragma",
+        "value": "no-cache",
+      },
+    ],
+    "referrer-policy": Array [
+      Object {
+        "key": "Referrer-Policy",
+        "value": "same-origin",
+      },
+    ],
+    "server": Array [
+      Object {
+        "key": "Server",
+        "value": "",
+      },
+    ],
+    "strict-transport-security": Array [
+      Object {
+        "key": "Strict-Transport-Security",
+        "value": "max-age=63072000; includeSubdomains",
+      },
+    ],
+    "x-content-type-options": Array [
+      Object {
+        "key": "X-Content-Type-Options",
+        "value": "nosniff",
+      },
+    ],
+    "x-frame-options": Array [
+      Object {
+        "key": "X-Frame-Options",
+        "value": "SAMEORIGIN",
+      },
+    ],
+    "x-xss-protection": Array [
+      Object {
+        "key": "X-XSS-Protection",
+        "value": "1; mode=block",
+      },
+    ],
+  },
+  "status": "200",
+  "statusDescription": "OK",
+}
+`;

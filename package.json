@@ -1,0 +1,35 @@
+{
+  "name": "http-secure-headers",
+  "version": "1.0.0",
+  "description": "Lambda@Edge for adding secure HTTP headers in CloudFront responses",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
+    "eslint": "eslint . --ext .ts",
+    "prettier": "prettier --check src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raccna/http-secure-headers.git"
+  },
+  "keywords": [
+    "Lambda"
+  ],
+  "author": "John Bergstrom",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.72",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.34",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.17.0",
+    "aws-sdk": "2.858.0",
+    "eslint": "^7.22.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.3",
+    "typescript": "^4.2.3"
+  }
+}
