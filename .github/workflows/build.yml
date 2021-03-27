@@ -1,0 +1,40 @@
+name: AWS HTTP secure headers
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '14'
+
+      - name: Setup Cache
+        uses: actions/cache@v2.1.4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install packages
+        run: npm i
+
+      - name: Run Prettier
+        run: npm run prettier
+
+      - name: Run Lint
+        run: npm run eslint
+
+      - name: Run Tests
+        run: npm run test
