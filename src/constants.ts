@@ -1,7 +1,7 @@
 const CSP_RULES = {
   'default-src': "'none'",
   'form-action': "'self'",
-  'base-src': "'self'",
+  'base-uri': "'self'",
   'frame-ancestors': "'none'"
 };
 
