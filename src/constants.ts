@@ -7,7 +7,7 @@ const CSP_RULES = {
   'manifest-src': "'self'",
   'script-src': "'self'",
   'script-src-elem': "'self' 'unsafe-inline'",
-  'style-src-elem': "'self'"
+  'style-src-elem': "'self' 'unsafe-inline'"
 };
 
 export const cspRules = (): string =>
