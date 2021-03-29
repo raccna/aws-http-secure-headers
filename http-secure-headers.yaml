@@ -3,7 +3,10 @@ Description: 'Lambda@Edge for adding secure HTTP headers to CloudFront responses
 Transform: AWS::Serverless-2016-10-31
 
 Parameters:
-  Stage:
+  app:
+    Type: String
+    Description: Name of the application (e.g. my-app)
+  stage:
     Type: String
     Description: Name of the stage (e.g. dev)
 
@@ -29,21 +32,23 @@ Resources:
   HttpSecureHeadersAppenderFunction:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub ${Stage}-http-secure-headers-appender
+      FunctionName: !Sub ${stage}-${app}-http-secure-headers-appender
       Description: 'Lambda for appending secure HTTP headers to CloudFront responses'
-      Runtime: nodejs14.x
+      Runtime: nodejs12.x
       CodeUri: dist
       Handler: index.handler
       Timeout: 1
       AutoPublishAlias: live
       Role: !GetAtt LambdaEdgeFunctionRole.Arn
     Tags:
+      - Key: 'application'
+        Vale: '${app}'
       - Key: 'stage'
-        Value: '${Stage}'
+        Value: '${stage}'
 
 Outputs:
   VersionArn:
     Description: 'ARN for http secure headers Lambda@edge function'
     Value: !Ref HttpSecureHeadersAppenderFunction.Version
     Export:
-      Name: !Sub '${Stage}-HttpSecureHeadersAppenderFunctionArn'
+      Name: !Sub 'HttpSecureHeadersAppenderFunctionArn'

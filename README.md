@@ -36,13 +36,21 @@ Run tests locally in watch mode:
 
 ## Build & deploy
 
+Create bucket
+
+```
+  aws s3api create-bucket --bucket DEPLOYMENT_BUCKET --region us-east-1
+```
+
+Deploy lambda
+
 ```
   npm run build
-  sam deploy -t http-secure-headers.yaml
-      --stack-name http-secure-headers
-      --s3-bucket DEPLOYMENT_BUCKET
-      --capabilities CAPABILITY_IAM
-      --parameter-overrides Stage=dev
-      --region us-east-1
+  sam deploy -t http-secure-headers.yaml \
+      --stack-name STACK_NAME \
+      --s3-bucket DEPLOYMENT_BUCKET \
+      --capabilities CAPABILITY_IAM \
+      --parameter-overrides app=APP_NAME stage=STAGE \
+      --region us-east-1 \
       --no-fail-on-empty-changeset
 ```
