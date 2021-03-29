@@ -4,7 +4,7 @@ const CSP_RULES = {
 
 export const cspRules = (): string =>
   Object.entries(CSP_RULES)
-    .map(([key, value]) => `${key}: ${value}`)
+    .map(([key, value]) => `${key} ${value}`)
     .join('; ');
 
 export const STRICT_TRANSPORT_SECURITY = [
