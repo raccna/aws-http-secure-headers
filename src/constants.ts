@@ -1,8 +1,13 @@
 const CSP_RULES = {
+  'base-uri': "'self'",
   'default-src': "'none'",
   'form-action': "'self'",
-  'base-uri': "'self'",
-  'frame-ancestors': "'none'"
+  'frame-ancestors': "'none'",
+  'img-src': "'self'",
+  'manifest-src': "'self'",
+  'script-src': "'self'",
+  'script-src-elem': "'self' 'unsafe-inline'",
+  'style-src-elem': "'self'"
 };
 
 export const cspRules = (): string =>
