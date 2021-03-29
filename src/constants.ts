@@ -1,5 +1,8 @@
 const CSP_RULES = {
-  'default-src': "'none'"
+  'default-src': "'none'",
+  'form-action': "'self'",
+  'base-src': "'self'",
+  'frame-ancestors': "'none'"
 };
 
 export const cspRules = (): string =>
