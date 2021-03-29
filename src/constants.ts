@@ -1,5 +1,5 @@
 const CSP_RULES = {
-  'default-src': "'self'"
+  'default-src': "'none'"
 };
 
 export const cspRules = (): string =>
